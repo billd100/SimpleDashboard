@@ -1,0 +1,26 @@
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Oswald);
+</style>
+
+<link type="text/css" rel="stylesheet" href="/css/common.css">
+<link type="text/css" rel="stylesheet" href="/css/home.css">
+
+<div class="header">
+  <h1>Welcome to the Dashboard</h1>
+  <a href="/edit-links"><button>Add Links</button></a>
+</div>
+
+<div class="wrapper wrapper-background wrapper-radius-full">
+  {{ range $key, $val := .Links }}
+  <div class="link-boxes">
+  <a href="{{$val}}" target="{{$val}}">
+    <div>
+      <div class="circle"></div>
+      <span>{{$key}}</span>
+    </div>
+  </a>
+  </div>
+  {{end}}
+
+
+</div>

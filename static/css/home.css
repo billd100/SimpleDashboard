@@ -1,0 +1,114 @@
+.wrapper a {
+  width: 200px;
+  height: 200px;
+  background: #34495E;
+  display: inline-block;
+  border-radius: 2px;
+  margin: 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.wrapper a span {
+  color: white;
+  font-size: 16px;
+  position: relative;
+  top: 10px;
+  transition: 0.3s;
+}
+
+.wrapper a div {
+  display: block;
+  color: white;
+  bottom: 10px;
+  left: 0;
+  font-size: 10px;
+  right: 0;
+  margin: 0 auto;
+}
+
+.wrapper input[type='checkbox'] {
+  display: none;
+}
+
+.wrapper input[type='checkbox']:checked+label a,
+.wrapper input[type='checkbox']:checked+label p {
+  display: block;
+}
+
+.wrapper input[type='checkbox']:checked+label {
+  left: 0;
+  transform: scale(3.33);
+  z-index: 122221;
+  transition-duration: 0.1s;
+  position: relative;
+  transition-property: transform;
+  top: 0;
+  background: #5d85a1;
+}
+
+.wrapper {
+  padding: 50px 0px;
+}
+
+.wrapper .link-boxes {
+  display: inline;
+}
+
+.home-link-container {
+  padding: 50px 50px;
+}
+
+.wrapper .link-boxes:hover .circle {
+  border: 3px solid #dd5;
+  -webkit-animation: circle 0.5s infinite;
+}
+
+.wrapper .link-boxes:hover span {
+  color: #dd5;
+}
+
+.wrapper .circle {
+  visibility: visible;
+  width: 40px;
+  height: 40px;
+  border: 3px solid white;
+  border-radius: 100%;
+  opacity: 0.6;
+  margin: 60px auto 0px auto;
+  -webkit-animation: circle 1s infinite;
+  /* Chrome, Safari, Opera */
+  animation: circle 1s infinite;
+}
+
+/* Animations */
+@-webkit-keyframes circle {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+button {
+  background-color: #92b2cd;
+  border-radius: 2px;
+  border: 0px;
+  color: #fff;
+  padding: 10px 25px;
+  font-family: "Oswald", sans-serif;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #34495E;
+  cursor: pointer;
+}

@@ -1,0 +1,42 @@
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Oswald);
+</style>
+
+<link rel="stylesheet" type="text/css" href="/css/common.css">
+<link rel="stylesheet" type="text/css" href="/css/edit-links.css">
+
+<script type="text/javascript" src="/js/edit-links.js"></script>
+
+<div class="header">
+    <h1>Edit Dashboard Links</h1>
+</div>
+
+<div class="wrapper wrapper-padding wrapper-background-34495E wrapper-radius-top">
+    <form action="/save/" method="POST" class="edit-links-form">
+        <table class="rwd-table">
+            <tr>
+                <th>Name</th>
+                <th>URL / IP</th>
+                <th></th>
+            </tr>
+            {{ range $key, $val := .Links }}
+            <tr>
+                <td data-th="Name">
+                    <input data-id={{$key}} data-type="name" type="text" name={{$key}} value="{{$key}}" />
+                </td>
+                <td data-th="URL / IP">
+                    <input data-id={{$key}} data-type="link" type="text" name={{$key}} value="{{$val}}" />
+                </td>
+                <td data-id={{$key}} data-type="remove" style="padding: 5px 15px; color: #fff; cursor: pointer;">X</td>
+            </tr>
+            {{ end }}
+        </table>
+        <div class="cancel-submit-button-container">
+            <a href="/"><button class="cancel-button" type="button">Cancel</button></a>
+            <button class="submit-button" type="submit">Save</button>
+        </div>
+    </form>
+</div>
+<div id="div-button" class="wrapper wrapper-background-34495E wrapper-radius-bottom add-link-button">
+    <div class="add-link-button-text">+</div>
+</div>
